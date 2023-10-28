@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="login-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box form-box">
+
+        <!-- <?php
+
+            include("php/config.php");
+            if(isset($POST['submit'])){
+                $username = $_POST['username'];
+                $email = $_POST['email'];
+                $age = $_POST['age'];
+                $password = $_POST['password'];                
+            //verifying the unique email
+
+            $verify_query = mysqli_query($con,"SELECT Email FROM users WHERE Email='$email'");
+
+            if(mysqli_num_rows($verify_query) !=0){
+                echo "<div class = 'messege'>
+                    <p> This Email is already used !!</p>
+                    </div><br>";
+                    echo  "<a href = javascript : self.history.back()'><button class = 'btn'>Go back</button>";
+            }
+            else{
+                mysqli_query($con, "INSERT INTO users(Username,Email,Age,Password) VALUES('$username','$email','$age','$password')") or die("Error Occured");
+
+            }
+            echo "<div class = 'messege'>
+                    <p> Registered Successfully !</p>
+                    </div><br>";
+                    echo  "<a href =index.php'><button class = 'btn'>Login Now </button>";
+           
+            }
+            else{
+        
+        
+        
+        
+        ?> -->
+
+
+
+
+
+            <header>Sign Up</header>
+            <form action="" method="post">
+                
+                <div class="field input">
+                    <label for="username">Username</label>
+                        <input type="text" name="username" id="username" autocomplete="off" required style="font-size:16px;">
+                    
+                </div>
+                <div class="field input">
+                    <label for="email">Email</label>
+                        <input type="text" name="email" id="email"  autocomplete="off" required style="font-size:16px;">
+                    
+                </div>
+                <div class="field input">
+                    <label for="age">Age</label>
+                        <input type="number" name="age" id="age"  autocomplete="off" required style="font-size:16px;">
+                    
+                </div>
+                <div class="field input">
+                    <label for="password">Password</label>
+                        <input type="text" name="password" id="password"  autocomplete="off" required style="font-size:16px;">
+                    
+                </div>
+                <div class="field">
+                    
+                        <input type="button" id="btn" value="Sign Up" required>
+                    
+                </div>
+                <div class="links">
+                    Already have an account? <a href="login.html">Log In</a>
+                </div>
+                <div class="field">
+                    
+                   
+                    <button id="btn"><a href="C:\Users\BHARGAB DAS\Desktop\projectssss\index.html" style="color: white;font-weight:bolder;text-decoration:none;">Start without account</a></button> 
+                 
+             </div>
+            </form>
+            <?php } ?>
+        </div>
+    </div>
+</body>
+</html>
